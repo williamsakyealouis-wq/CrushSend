@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CrushSend</title>
+
+    <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7c3aed">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="welcome">
+            <div class="logo">💌</div>
+
+            <h1>CrushSend</h1>
+
+            <p>
+                Send a thoughtful crush confession
+                without revealing your identity.
+            </p>
+
+            <button id="startBtn">
+                Send a Confession
+            </button>
+        </section>
+
+        <section id="confessionSection" class="hidden">
+
+            <h2>Create Your Confession</h2>
+
+            <label for="method">
+                How should we send it?
+            </label>
+
+            <select id="method">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+            </select>
+
+            <label id="recipientLabel" for="recipient">
+                Crush's email
+            </label>
+
+            <input
+                id="recipient"
+                type="email"
+                placeholder="Enter email address"
+            >
+
+            <label for="message">
+                Your message
+            </label>
+
+            <textarea
+                id="message"
+                rows="6"
+                maxlength="500"
+                placeholder="Tell your crush how you feel..."
+            ></textarea>
+
+            <div class="counter">
+                <span id="counter">0</span>/500
+            </div>
+
+            <button id="previewBtn">
+                Preview Confession
+            </button>
+
+        </section>
+
+        <section id="previewSection" class="hidden">
+
+            <h2>Preview</h2>
+
+            <div class="preview-card">
+
+                <p>💌 Anonymous Crush Confession</p>
+
+                <p id="previewMessage"></p>
+
+            </div>
+
+            <button id="sendBtn">
+                Send Confession
+            </button>
+
+            <button id="backBtn" class="secondary">
+                Go Back
+            </button>
+
+        </section>
+
+        <section id="successSection" class="hidden">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Confession Ready</h2>
+
+            <p>
+                Your confession has been submitted.
+            </p>
+
+            <p class="small">
+                In the production version, the secure
+                backend will process delivery here.
+            </p>
+
+            <button id="newBtn">
+                Send Another
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
